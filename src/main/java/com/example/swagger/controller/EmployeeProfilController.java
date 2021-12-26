@@ -36,9 +36,9 @@ public class EmployeeProfilController {
         return employees;
     }
 
-    @ApiOperation(value = "Fetch Employee by Departement", response = Iterable.class)
-    @GetMapping(value = "fetch/{departement}")
-    public Employee fetchEmployeeByName(@ApiParam(value = "Dapartement Name", required = true) @PathVariable String departement) {
+    @ApiOperation(value = "Fetch Employee by Department", response = Iterable.class)
+    @GetMapping(value = "fetch/{department}")
+    public Employee fetchEmployeeByDepartent(@ApiParam(value = "Dapartment Name", required = true) @PathVariable String departement) {
         return employees.stream().filter(x -> x.getDepartment().equalsIgnoreCase(departement)).findFirst().get();
     }
 

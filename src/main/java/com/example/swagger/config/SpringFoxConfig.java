@@ -30,9 +30,14 @@ public class SpringFoxConfig {
         return new ApiInfoBuilder()
                 .title("Employee Profile API")
                 .description("This API can be used to get profile level actions and information for an Employee")
-                .version("V 1.0").contact( new Contact("Boris DVN", "www.example.com", "myeaddress@company.com"))
+                .version("V 1.0").contact(new Contact("Boris DVN", "www.example.com", "myeaddress@company.com"))
                 .build();
     }
+
+    /*@Bean
+    public EmailAnnotationPlugin emailPlugin() {
+        return new EmailAnnotationPlugin();
+    }*/
 
     /*private ApiInfo apiInfo() {
     return new ApiInfo(

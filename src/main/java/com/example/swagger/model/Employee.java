@@ -26,6 +26,7 @@ public class Employee {
     private String name;
 
     @ApiModelProperty(notes = "Department of the Employee", name = "department", required = true, value = "Direction")
+    @NotEmpty(message = "Department cannot be empty")
     private String department;
 
     @ApiModelProperty(notes = "Phone Number of the Employee", name = "phoneNumber", required = true, value = "12345678")
@@ -35,8 +36,7 @@ public class Employee {
     private long phoneNumber;
 
     @ApiModelProperty(notes = "Email of the Employee", name = "email", required = true, value = "email@person.com")
-    @Email(message = "Email is not valid")
-    @NotEmpty(message = "Email cannot be empty")
+    @Email(regexp=".*@.*\\..*", message = "Email should be valid")
     private String email;
 
 }
